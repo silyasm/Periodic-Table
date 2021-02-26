@@ -13,6 +13,7 @@
 		3F598D7C25E8AEDC00AFDEDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F598D7B25E8AEDC00AFDEDD /* Preview Assets.xcassets */; };
 		3F598D8725E8AEDE00AFDEDD /* Periodic_TableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F598D8625E8AEDE00AFDEDD /* Periodic_TableTests.swift */; };
 		3F598D9225E8AEDE00AFDEDD /* Periodic_TableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F598D9125E8AEDE00AFDEDD /* Periodic_TableUITests.swift */; };
+		3FDA816F25E8B1FE004C976E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA816E25E8B1FD004C976E /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3F598D8D25E8AEDE00AFDEDD /* Periodic TableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Periodic TableUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F598D9125E8AEDE00AFDEDD /* Periodic_TableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periodic_TableUITests.swift; sourceTree = "<group>"; };
 		3F598D9325E8AEDE00AFDEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FDA816E25E8B1FD004C976E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				3F598D7625E8AED400AFDEDD /* ContentView.swift */,
 				3F598D7825E8AEDC00AFDEDD /* Assets.xcassets */,
 				3F598D7D25E8AEDC00AFDEDD /* Info.plist */,
+				3FDA816E25E8B1FD004C976E /* SwiftyJSON.swift */,
 				3F598D7A25E8AEDC00AFDEDD /* Preview Content */,
 			);
 			path = "Periodic Table";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDA816F25E8B1FE004C976E /* SwiftyJSON.swift in Sources */,
 				3F598D7725E8AED400AFDEDD /* ContentView.swift in Sources */,
 				3F598D7525E8AED400AFDEDD /* Periodic_TableApp.swift in Sources */,
 			);
