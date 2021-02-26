@@ -15,13 +15,14 @@ struct ContentView: View {
                 NavigationLink(
                     destination: VStack {
                         Text(element.symbol)
-                            .padding()
+                            .font(.largeTitle)
+                            .foregroundColor(.blue)
                         Text(element.name)
+                        Text("Atomic Number: \(element.atomicNumber)")
                             .padding()
-                        Text(element.atomicNumber)
-                            .padding()
+                        Text("Atomic Mass: \(element.atomicMass)")
                         Text(element.history)
-                            .paddding()
+                            .padding()
                     },
                     label: {
                         HStack {
@@ -37,8 +38,8 @@ struct ContentView: View {
         })
     }
     func queryAPI() {
-        let apiKey = "53c34bdf56msha93492520b56cffp1c92cajsn116ab7eb6ea6"
-        let query = "https://periodictable.p.rapidapi.com/?rapidapi-key=\(apiKey)"
+        let apiKey = "?rapidapi-key=53c34bdf56msha93492520b56cffp1c92cajsn116ab7eb6ea6"
+        let query = "https://periodictable.p.rapidapi.com/\(apiKey)"
         if let url = URL(string: query) {
             if let data = try? Data(contentsOf: url) {
                 let json = try! JSON(data: data)
@@ -46,9 +47,10 @@ struct ContentView: View {
                 for item in contents {
                     let symbol = item["symbol"].stringValue
                     let name = item["name"].stringValue
-                    let atomicNumber = item["atomic number"].stringValue
+                    let atomicNumber = item["atomicNumber"].stringValue
+                    let atomicMass = item["atomicMass"].stringValue
                     let history = item["history"].stringValue
-                    let element = Element(symbol: symbol, name: name, atomicNumber: atomicNumber, history: history)
+                    let element = Element(symbol: symbol, name: name, atomicNumber: atomicNumber, atomicMass: atomicMass, history: history)
                     elements.append(element)
                 }
             }
@@ -67,5 +69,6 @@ struct Element: Identifiable {
     let symbol: String
     let name: String
     let atomicNumber: String
+    let atomicMass: String
     let history: String
 }
